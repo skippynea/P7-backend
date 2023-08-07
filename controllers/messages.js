@@ -1,4 +1,4 @@
-// messages management
+// simple messages management
 
 const Messages = require('../models/message');
 const fs = require('fs');

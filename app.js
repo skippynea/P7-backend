@@ -5,11 +5,13 @@
 const path = require('path');
 
 const express = require('express');
-const mongoose = require('mongoose');
+
+const app = express();
+app.use(express.json());
 
 // i need the routes
-/* const messagesRoutes = require('./routes/message');
-const userRoutes = require('./routes/user'); */
+const messagesRoutes = require('./routes/messagesRoutes');
+// const userRoutes = require('./routes/user');
 
 // database connection
 const db = require('./config/database.js');
