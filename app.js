@@ -2,10 +2,13 @@
 // File to hide the password
 // require('dotenv').config();
 // 
-const path = require('path');
 
+// Importing modules
+const dotenv = require('dotenv').config();
+const path = require('path');
 const express = require('express');
 
+// using Express
 const app = express();
 app.use(express.json());
 
@@ -13,13 +16,13 @@ app.use(express.json());
 const messagesRoutes = require('./routes/messagesRoutes');
 // const userRoutes = require('./routes/user');
 
-// database connection
+// database connection (testing the connection)
 const db = require('./config/database.js');
 const { Server } = require('http');
 db.authenticate().then(() => {
-  console.log('Database connected...');
+  console.log('Database connected successfully...');
 }).catch(err => {
-  console.log('Error: ' + err);
+  console.log('Unable to connect to the database ! Error: ' + err);
 })
 
 // i need some headers

@@ -1,9 +1,12 @@
-// model of "message"
+/* 
+Model Definition
+*/
 
-
+// importing modules
 const Sequelize = require('sequelize');
 const db = require('../config/database');
 
+// model definition for "message"
 const Message = db.define('message', {
     id: {
         type: Sequelize.INTEGER,
