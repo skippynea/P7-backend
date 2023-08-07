@@ -1,14 +1,14 @@
-//importing modules
+// importing modules
 const express = require('express');
 const sequelize = require('sequelize');
 const dotenv = require('dotenv').config();
 const cookieParser = require('cookie-parser');
 
-//assigning the variable app and http
+// assigning the variable app and http
 const http = require('http');
 const app = require('./app');
 
-//
+// setting up the port for the server
 const normalizePort = val => {
   const port = parseInt(val, 10);
 
@@ -20,6 +20,7 @@ const normalizePort = val => {
   }
   return false;
 };
+
 const port = normalizePort(process.env.PORT || '3000');
 app.set('port', port);
 
@@ -43,8 +44,11 @@ const errorHandler = error => {
   }
 };
 
+// assigning the variable 'server' with the server created by node and express
 const server = http.createServer(app);
 
+// listening to server connection
+// & write a message with server status in the console : "Listening on port XXXX"
 server.on('error', errorHandler);
 server.on('listening', () => {
   const address = server.address();
