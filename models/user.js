@@ -7,6 +7,7 @@ const Sequelize = require('sequelize');
 const db = require('../config/database');
 
 // model definition for "user"
+// set up the 'user' schema with Sequelize
 const User = db.define('user', {
     userName: {
         type: Sequelize.STRING,
