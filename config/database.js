@@ -1,7 +1,7 @@
 // require('dotenv').config();
 
 const { Sequelize } = require('sequelize');
-const db = new Sequelize('codegig', 'postgres', 'stevetheboss', {
+const db = new Sequelize('socialnetworkdb', 'postgres', 'stevetheboss', {
     host: 'localhost',
     dialect: 'postgres',
 
