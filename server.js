@@ -1,7 +1,14 @@
+//importing modules
+const express = require('express')
+const sequelize = require('sequelize')
+const dotenv = require('dotenv').config()
+const cookieParser = require('cookie-parser')
 
+//assigning the variable app and http
 const http = require('http');
 const app = require('./app');
 
+//
 const normalizePort = val => {
   const port = parseInt(val, 10);
 
