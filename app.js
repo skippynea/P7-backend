@@ -1,10 +1,12 @@
 // Access to the database
 // File to hide the password
-// require('dotenv').config();
-// 
+
+// module that loads environment variables 
+// from a .env file 
+// (Storing configuration in the environment separate from code)
+require('dotenv').config();
 
 // Importing modules
-const dotenv = require('dotenv').config();
 const path = require('path');
 const express = require('express');
 
