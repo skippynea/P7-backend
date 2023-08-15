@@ -16,7 +16,7 @@ app.use(express.json());
 
 // i need the routes
 const messagesRoutes = require('./routes/messagesRoutes');
-// const userRoutes = require('./routes/user');
+const userRoutes = require('./routes/user');
 
 // database connection (testing the connection)
 const db = require('./config/database.js');
@@ -40,6 +40,6 @@ app.use ('/images', express.static(path.join(__dirname, 'images')));
 
 // i need an "app.use" for the POST
 app.use('/api/messages', messagesRoutes);
-// app.use('/api/auth', userRoutes);
+app.use('/api/auth', userRoutes);
 
 module.exports = app;
