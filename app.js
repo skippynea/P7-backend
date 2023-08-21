@@ -36,10 +36,10 @@ app.use((req, res, next) => {
   });
 
 // path to the folder to store the "images"
-app.use ('/images', express.static(path.join(__dirname, 'images')));
+// app.use ('/images', express.static(path.join(__dirname, 'images')));
 
 // i need an "app.use" for the POST
-app.use('/api/messages', messagesRoutes);
-app.use('/api/auth', userRoutes);
+// app.use('/api/messages', messagesRoutes);
+// app.use('/api/auth', userRoutes);
 
 module.exports = app;
