@@ -1,10 +1,10 @@
 // Importing modules
-const express = require("express");
-const db = require("../Models");
+// const express = require("express");
+// const db = require("../Models");
 const jwt = require('jsonwebtoken');
 
 //Assigning db.users to User variable
-const User = db.users;
+// const User = db.users;
 
 module.exports = (req, res, next) => {
   try {

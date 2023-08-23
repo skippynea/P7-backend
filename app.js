@@ -40,6 +40,6 @@ app.use((req, res, next) => {
 
 // i need an "app.use" for the POST
 // app.use('/api/messages', messagesRoutes);
-// app.use('/api/auth', userRoutes);
+app.use('/api/auth', userRoutes);
 
 module.exports = app;
