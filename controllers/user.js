@@ -11,7 +11,7 @@ exports.signup = (req, res, next) => {
           email: req.body.email,
           password: hash
         });
-      // console.log(user);
+      console.log(user);
         User.create(user).then(
           () => {
             res.status(201).json({
@@ -21,7 +21,8 @@ exports.signup = (req, res, next) => {
         ).catch(
           (error) => {
             res.status(500).json({
-              error: error
+              error: error,
+            
             });
           }
         );

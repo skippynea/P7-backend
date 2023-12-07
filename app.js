@@ -10,8 +10,19 @@ require('dotenv').config();
 const path = require('path');
 const express = require('express');
 
+// need cors 
+const cors = require('cors');
+
+const corsOptions = {
+  origin: "http://localhost:3000",
+  credentials: true, //access-control-allow-credentials:true
+  optionSuccessStatus: 200,
+};
+
 // using Express
 const app = express();
+app.use(cors());
+app.use(cors(corsOptions));
 app.use(express.json());
 
 // i need the routes
